@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  next-app:
+    image: toilahuong/docker-test
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+networks:
+  my_network:
+    external: true
